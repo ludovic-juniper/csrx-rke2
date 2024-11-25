@@ -1,0 +1,30 @@
+apiVersion: v1
+kind: Pod
+metadata:
+  name: ubuntuapp-private
+  namespace: csrx
+  annotations:
+    k8s.v1.cni.cncf.io/networks: '[{ "name": "network-conf-1" }]'
+    k8s.v1.cni.cncf.io/networks-status: |- 
+      [{
+          "name": "network-conf-1",
+          "interface": "net1",
+          "ips": [
+              "192.168.31.11"
+          ],
+          "mac": "22:2f:60:a5:ff:01",
+          "dns": {}
+      }]
+  labels:
+    app: ubuntuapp
+    zone: private
+spec:
+  containers:
+    - name: ubuntuapp
+      image: ubuntu-upstart
+      command: ['sh', '-c', "ifconfig net1 192.168.31.11/24;route add -net 192.168.33.0/24 gw 192.168.31.1;mount /sys/fs/selinux -o remount,ro; apt install iperf; apt install ethtool; ethtool -K net1 tx off; sleep 40; iperf -c 192.168.33.11 -t 300;sleep 100d"]
+      securityContext:
+        privileged: true
+        capabilities:
+          add:
+          - NET_ADMIN

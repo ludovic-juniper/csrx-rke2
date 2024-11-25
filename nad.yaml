@@ -1,0 +1,59 @@
+---
+apiVersion: "k8s.cni.cncf.io/v1"
+kind: NetworkAttachmentDefinition
+metadata:
+  name: network-conf-1
+  namespace: csrx
+
+spec:
+  config: '{
+    "cniVersion": "0.3.0",
+    "type": "bridge",
+    "master": "eno2",
+    "promiscMode": true,
+    "ipam":
+    {
+       "type": "static",
+       "addresses": [
+                        {
+                            "address": "192.168.31.0/24",
+                            "gateway": "192.168.31.1"
+                        }
+                    ],
+        "routes": [
+                        {
+                          "dst": "0.0.0.0/0"
+                        }
+                  ]
+    }
+}'
+
+---
+apiVersion: "k8s.cni.cncf.io/v1"
+kind: NetworkAttachmentDefinition
+metadata:
+  name: network-conf-2
+  namespace: csrx
+
+spec:
+  config: '{
+    "cniVersion": "0.3.0",
+    "type": "bridge",
+    "master": "eno3",
+    "promiscMode": true,
+    "ipam":
+    {
+       "type": "static",
+       "addresses": [
+                        {
+                            "address": "192.168.33.0/24",
+                            "gateway": "192.168.33.1"
+                        }
+                    ],
+        "routes": [
+                        {
+                          "dst": "0.0.0.0/0"
+                        }
+                  ]
+    }
+}'

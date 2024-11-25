@@ -1,0 +1,56 @@
+
+apiVersion: v1
+kind: Pod
+metadata:
+  name: csrx
+  namespace: csrx
+  annotations:
+    k8s.v1.cni.cncf.io/networks: '[
+      { "name": "network-conf-1" },
+      { "name": "network-conf-2" }
+    ]'
+spec:
+  containers:
+  - name: csrx
+    securityContext:
+       privileged: true
+    image: quay.io/juniper-128t/csrx:21.1R3.11
+#    image: quay.io/juniper-128t/csrx:24.2R1.17
+#    image: andyleung/csrx22.4
+#    image: quay.io/ipadilla0/csrx:latest
+    imagePullPolicy: IfNotPresent
+    env:
+    - name: CSRX_ROOT_PASSWORD
+      value: "lab123"
+    - name: CSRX_SIZE
+      value: "large"
+    - name: CSRX_HUGEPAGES
+      value: "no"
+    - name: CSRX_PACKET_DRIVER
+      value: "interrupt"
+    - name: CSRX_AUTO_ASSIGN_IP
+      value: "yes"
+    - name: CSRX_FORWARD_MODE
+      value: "routing"
+    - name: CSRX_LICENSE_FILE
+      value: "/var/jail/.csrx_license"
+    - name: CSRX_JUNOS_CONFIG
+      value: "var/jail/csrx_config"
+    volumeMounts:
+    - name: config
+      mountPath: "/var/jail"
+#    - name: disk
+#      mountPath: "/dev"
+  volumes:
+  - name: config
+    configMap:
+      name: csrx-config-map
+      items:
+      - key: csrx_config
+        path: csrx_config
+      - key: csrx_license
+        path: .csrx_license
+#  - name: disk
+#    hostPath:
+#     path: /dev
+#     type: Directory
