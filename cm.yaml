@@ -1,16 +1,16 @@
-kind: ConfigMap 
-apiVersion: v1 
+kind: ConfigMap
+apiVersion: v1
 metadata:
   name: csrx-config-map
   namespace: csrx
 data:
-  csrx_license: | 
-    Issue Date          : 14-Oct-2024                   
-    Expiry Date         : 14-Oct-2025 
+  csrx_license: |
+    Issue Date          : 14-Oct-2024
+    Expiry Date         : 14-Oct-2025
 
-    HW Serial Number    : N/A 
+    HW Serial Number    : N/A
 
-    SSRN                : 307102022020                                
+    SSRN                : 307102022020
 
     Feature             : S-CSRX-A2_DEMOLAB
     Quantity            : 1
@@ -30,29 +30,37 @@ data:
     19 115 Ni LONG NORMAL STANDALONE AGGR 1_KEYS INFINITE_KEYS 14 OCT 2024 0 0 14 OCT 2025 0 0 NiL SLM_CODE DEMO NiL NiL Ni NiL NiL 15_MINS NiL 0 Tl0PnnnAwTqzRZY2TdJ1tovYZ+7sd8RlyC4toZo29NNNtPpMuL5i3nfNoLLAdywM4zmLrsfguy22L3QR7qngLMuX84CKfD+gemLhRe/8WnxgrmJQ4i8dyuGWJ7x7oWyVg525JoD93UTiSqvKk6pEiHRHlYa+fGoMf5Ch53BnJahlHavtmcZqPlkfT+epNrz7lI/VsfWqedg6vbs2mVQaLnI09CJIngHeFdmjYph5MW7IF/o6uqAiNI3l36kd4ysa6GcfR9WPWvrouWHtwVskUY+tsefPSKuYlci+RUqTX0rOlatksz8wLoZvFkZFV2CMXm9J4IXG3rBupGkDYii7CFA8CBmpwAYBmgEFNMZ4+ee4ndQtkn9w7XCffk2QmDzBs9t+/aWwf3VDeAitcVVNw+tCNWR7O6OEpWcS/gIZmXqWY/YLTVmeRYII/blZLm+UJzP03adJmSc6FWGt7VMn3CpdNQbBOzHA/dxPHg5b65kFvEfrGiCoPFj3o6WVa7NLzbs709cEaTaqiHIiWraGNCJPj5P16pUd3kbeuSIud6HKAiDF03uvtJX7PH6140TxVlfW3L/Q/pNWtFd+o/14ELupD+TJjDmAZkaDaRa1l7ty6mbJIUf4fsA4xR79tmzABQRSQ0IyC4MJBQRSQ0IyBgEBBwEBBCU4YjFiNmYxZC0zNzY5LTRmNGUtYjM4Ny0zNGUzMmVlOTYzYmQACAEBCUClydIpUZi6n8jzILOrVPag59XNDAizpYck68gc4uLfRITzGmdQTKfa9U1K8BGjzfbX0S4wCDZhm4lh55efpLXVCoIOMIIBCgKCAQEA2OMgESQh1fz4LjXZ0SmDsrPGJ2cB5zU4CPsQmQj0FjnjUYfF41nDGO6O4mpIny5WTzFJYSp61719oZyDEVsJYZwnqK3NzyswNBVj3CqSHx3HpKCu1nqAN1sC79hbxa3LsbvGa2522jtMzhrd7F3MdycGewa2O060rrBz9ZroxirqH6Zx4jmzFRJbgZX7UUOJswW3b5cTKlOyX/YYl1rQIoaZ+f1YtEaIRHQ8j9j8Xn/G4AT1XjQFOH9Yfo39PPERGr1sCGOIlKpYWZJhP6L3HqIMF22tsAWJLVkOIPCuI/PZpk5VMmYZoF3KMdo5kSfATgotW6ufhqSNSbhR6nu7iwIDAQABBCU4YjFiNmYxZC0zNzY5LTRmNGUtYjM4Ny0zNGUzMmVlOTYzYmQABwEBDIIAj/0GXRSG4RZgcziqdmNuGArFJszXA01vxuGTUS1dUjdf0PKBt0rp/92L0SoOPcTT/euVdaFJICecqJh5iqMBAEtLAw2fCeVHWSQOQdyj3dcthKhBU9krhybd9MQ+6Zsi1TUReOKqLiTuum7p6IDyVHqIISAfEhoE7j2A446m1JfJON08LujErm7c2f9PFYI0FMbjocBTuotH2gqaemRPGdqasYEP2aPrOdj/bQeGErw+Y2WULrkPYxQsiLDwTzcnEczDmmRHq0hDvCdCAs2bJ8q0CFezNXWJRSHBqd4ZRWvfg8TCCyKFrFSKqLlH+SAgzqW+D0Njf7kqv87hiVz/QwAAAr8=#KeyType=DemoLab#AID=f410a3dc-f128-4aad-8868-e62e8ddbf341
 
     19 69 Ni LONG NORMAL STANDALONE AGGR 1_KEYS INFINITE_KEYS 14 OCT 2024 0 0 14 OCT 2025 0 0 NiL SLM_CODE DEMO NiL NiL Ni NiL NiL 15_MINS NiL 0 2nQwG2pBfMECGCsk9W/45f1vWoVTnXhRcrNlhvcG9u8CVJM58PsTIHirFm70ilI6ICLwlP4GeBt9jJ2aPhPEN1DvY6YfEUXJLjo8CtToHVuNk+bm4i1gkwVmJpEb7fMb/bMie8z9jsL7q7N6MyBrlBOZkmAD0wChWyyRChp4UucZ9v0q7lPXocnbvuyzCR6KyVuvY3FPB+ZfwC/4FWgJZuxPvuxMmpYVpWORkrf6DrH1zU1ypWOTJLIhIOwnDB4n1V3FvWXSmA3q9M7785Bj3rSErDP7jt5FygiHrzcBKGw+ZjeOkEfwAsxgNET2KzTWrsOZwO/eVodY8BBxz4Rif6dByCze5XJmC896sNBrxW4ruXv3CAhy9CmRaEspUI2VayQ9zXsCnbUQqUGRfMyijk+zbhPpwHimI5MPK6pq6KeCDsHM+l5aWISXEXfG5Mdfq0w56/9OZU1FFg+yw8+Fu25j9haD4fxc4vfgsJssq3MF/H9C9xk+OX2yQnlidaA9hZGkC29lII3syaZSaGBKs9Z8zeONCo5R0fTPGGj2xAW620FGE6/RsOMRSoos7u7b0cjfXy6dQID165cg7M0H1+0NaY4h4vQEPQcMYfec2DzOio6ZyngPv1J4IzfnZ4E+BQRSQ0IyC4MJBQRSQ0IyBgEBBwEBBCU4YjFiNmYxZC0zNzY5LTRmNGUtYjM4Ny0zNGUzMmVlOTYzYmQACAEBCUClydIpUZi6n8jzILOrVPag59XNDAizpYck68gc4uLfRITzGmdQTKfa9U1K8BGjzfbX0S4wCDZhm4lh55efpLXVCoIOMIIBCgKCAQEA2OMgESQh1fz4LjXZ0SmDsrPGJ2cB5zU4CPsQmQj0FjnjUYfF41nDGO6O4mpIny5WTzFJYSp61719oZyDEVsJYZwnqK3NzyswNBVj3CqSHx3HpKCu1nqAN1sC79hbxa3LsbvGa2522jtMzhrd7F3MdycGewa2O060rrBz9ZroxirqH6Zx4jmzFRJbgZX7UUOJswW3b5cTKlOyX/YYl1rQIoaZ+f1YtEaIRHQ8j9j8Xn/G4AT1XjQFOH9Yfo39PPERGr1sCGOIlKpYWZJhP6L3HqIMF22tsAWJLVkOIPCuI/PZpk5VMmYZoF3KMdo5kSfATgotW6ufhqSNSbhR6nu7iwIDAQABBCU4YjFiNmYxZC0zNzY5LTRmNGUtYjM4Ny0zNGUzMmVlOTYzYmQABwEBDIIAj/0GXRSG4RZgcziqdmNuGArFJszXA01vxuGTUS1dUjdf0PKBt0rp/92L0SoOPcTT/euVdaFJICecqJh5iqMBAEtLAw2fCeVHWSQOQdyj3dcthKhBU9krhybd9MQ+6Zsi1TUReOKqLiTuum7p6IDyVHqIISAfEhoE7j2A446m1JfJON08LujErm7c2f9PFYI0FMbjocBTuotH2gqaemRPGdqasYEP2aPrOdj/bQeGErw+Y2WULrkPYxQsiLDwTzcnEczDmmRHq0hDvCdCAs2bJ8q0CFezNXWJRSHBqd4ZRWvfg8TCCyKFrFSKqLlH+SAgzqW+D0Njf7kqv87hiVz/QwAAAr8=#KeyType=DemoLab#AID=f410a3dc-f128-4aad-8868-e62e8ddbf341
-  
+
   csrx_config: |
     interfaces {
-      ge-0/0/0 {
+    ge-0/0/0 {
         unit 0 {
             family inet {
                 address 192.168.31.1/24;
             }
         }
     }
-      ge-0/0/1 {
+    ge-0/0/1 {
         unit 0 {
             family inet {
                 address 192.168.33.1/24;
             }
         }
     }
-
     }
     security {
         policies {
-            default-policy {
-                permit-all;
+            from-zone trust to-zone untrust {
+                policy permit-ping-iperf {
+                    match {
+                        source-address any;
+                        destination-address any;
+                        application [ junos-ping iperf ];
+                    }
+                    then {
+                        permit;
+                    }
+                }
             }
         }
         zones {
@@ -83,5 +91,10 @@ data:
                 }
             }
         }
-    } 
-
+    }
+    applications {
+        application iperf {
+            protocol tcp;
+            destination-port 5001;
+        }
+    }
