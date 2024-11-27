@@ -1,0 +1,79 @@
+kind: ConfigMap 
+apiVersion: v1 
+metadata:
+  name: csrx-config-map
+  namespace: csrx
+data:
+  csrx_license: | 
+    Issue Date          : 14-Oct-2024                   
+    Expiry Date         : 14-Oct-2025 
+
+    HW Serial Number    : N/A 
+
+    SSRN                : 307102022020                                
+
+    Feature             : S-CSRX-A2_DEMOLAB
+    Quantity            : 1
+    License Type        : DemoLab
+    License Key         :
+
+    DemoLabJUNOS520607852 aeaqic bfaio4 4kwpta bhhtrk z6mafa h6zyvm
+                          7gacdp hcvt4y ajb44k wptabe ltrkz6 mawert
+                          ga3tcm bsgazd embsga wwsvzu mjzaye ckovxg
+                          s4dfoi qes3tu mvzg4y lma4ub sr4hxm 5gae7f
+                          ceg23e ezxkqc mhq4z4 ckyyev qxggbu m2f6aj
+                          fuyl33 32a4fj tpvdxy a
+  csrx_config: |
+    interfaces {
+      ge-0/0/0 {
+        unit 0 {
+            family inet {
+                address 192.168.31.1/24;
+            }
+        }
+    }
+      ge-0/0/1 {
+        unit 0 {
+            family inet {
+                address 192.168.33.1/24;
+            }
+        }
+    }
+
+    }
+    security {
+        policies {
+            default-policy {
+                permit-all;
+            }
+        }
+        zones {
+            security-zone trust {
+                host-inbound-traffic {
+                    system-services {
+                        all;
+                    }
+                    protocols {
+                        all;
+                    }
+                }
+                interfaces {
+                    ge-0/0/0.0;
+                }
+            }
+            security-zone untrust {
+                host-inbound-traffic {
+                    system-services {
+                        all;
+                    }
+                    protocols {
+                        all;
+                    }
+                }
+                interfaces {
+                    ge-0/0/1.0;
+                }
+            }
+        }
+    } 
+
