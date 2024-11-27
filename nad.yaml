@@ -10,22 +10,7 @@ spec:
     "cniVersion": "0.3.0",
     "type": "bridge",
     "master": "eno2",
-    "promiscMode": true,
-    "ipam":
-    {
-       "type": "static",
-       "addresses": [
-                        {
-                            "address": "192.168.31.0/24",
-                            "gateway": "192.168.31.1"
-                        }
-                    ],
-        "routes": [
-                        {
-                          "dst": "0.0.0.0/0"
-                        }
-                  ]
-    }
+    "promiscMode": true
 }'
 
 ---
@@ -40,20 +25,5 @@ spec:
     "cniVersion": "0.3.0",
     "type": "bridge",
     "master": "eno3",
-    "promiscMode": true,
-    "ipam":
-    {
-       "type": "static",
-       "addresses": [
-                        {
-                            "address": "192.168.33.0/24",
-                            "gateway": "192.168.33.1"
-                        }
-                    ],
-        "routes": [
-                        {
-                          "dst": "0.0.0.0/0"
-                        }
-                  ]
-    }
+    "promiscMode": true
 }'
