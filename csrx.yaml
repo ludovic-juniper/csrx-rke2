@@ -19,6 +19,13 @@ spec:
 #    image: andyleung/csrx22.4
 #    image: quay.io/ipadilla0/csrx:latest
     imagePullPolicy: IfNotPresent
+    resources:
+      requests:
+        memory: "4000Mi"
+        cpu: "2"
+      limits:
+        memory: "6000Mi"
+        cpu: "4"
     env:
     - name: CSRX_ROOT_PASSWORD
       value: "lab123"
